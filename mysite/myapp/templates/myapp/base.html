@@ -1,0 +1,22 @@
+<! -- load the css stylesheet: -->
+{% load static %}
+<html>
+    <head>
+        <! -- the bootstrap link should be at the top of the head tag -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel='stylesheet' href="{% static 'myapp/style.css' %}">
+    </head>
+
+    <body>
+        <!-- Image and text -->
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="{% url 'myapp:index' %}">
+            Book Store
+            </a>
+        </nav>
+    
+        {% block body %}
+        
+        {% endblock %}
+    </body>
+</html>
